@@ -50,7 +50,7 @@ body {
     padding: 4px;
     position: absolute;
     border-radius: 5px;
-    background: #019787;
+    /* background: #019787; */
     backface-visibility: hidden;
 }
 
