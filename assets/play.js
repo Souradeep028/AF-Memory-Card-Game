@@ -58,7 +58,6 @@ function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
     if(isMatch){
-        console.log(firstCard.dataset.framework)
         if(firstCard.dataset.framework==1){
             document.getElementById('artName').innerHTML = 'Amedeo Modigliani, \'Red-headed Girl in Evening Dress\', 1918';
         }
