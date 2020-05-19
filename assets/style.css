@@ -53,7 +53,7 @@ body {
     height: 100%;
     padding: 4px;
     position: absolute;
-    border-radius: 5px;
+    border-radius: 12px;
     /* background: #019787; */
     backface-visibility: hidden;
 }
