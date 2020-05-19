@@ -92,7 +92,12 @@ body {
     text-align: center;
     justify-content: center;
     clear: both;
-    padding-top: 90px;
+    padding-top: 140px;
+}
+
+#social-text{
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
 }
 
 .icon-container {
