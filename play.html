@@ -25,7 +25,7 @@
                 <strong>Flips: <span id="flip">0</span></strong>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="board">
             <div class="board">
                 <div class="cards" data-framework="monkey">
                     <img class="front-face" src="assets/img/monkey.png" alt="monkey" />
@@ -87,7 +87,21 @@
                 </a>
             </div> -->
         </div>
+
+        <div class="row justify-content-around" id="end">
+            <!-- <div class="col-md-4 col-xs-12">
+                <ul class="list-group" id="leaderboard">
+                </ul>
+            </div> -->
+            <div class="col-12 p-1 pb-3 text-center">
+                
+                <a href="./play.html" class="btn btn-dark btn-lg">
+                    Restart
+                </a>
+            </div>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/play.js"></script>
 </body>
 

@@ -2,6 +2,8 @@
 // backgroundMusic.volume = 0.5;
 // backgroundMusic.loop = true;
 
+$('#end').hide();
+
 let flipSound = new Audio('./assets/sound/flip.ogg');
 let matchSound = new Audio('./assets/sound/match.ogg');
 let notMatchSound = new Audio('./assets/sound/notmatch.ogg');
@@ -39,7 +41,11 @@ function isFinish() {
     if (cardLeft === 0) {
         // backgroundMusic.pause();
         clearInterval(interval);
-        setInterval(()=>window.location.assign('end.html'), 2000)
+        setInterval(()=>{
+            $('.time').hide();
+            $('#board').hide();
+            $('#end').show();
+        }, 2000)
     }
 }
 
@@ -88,7 +94,11 @@ function time() {
         document.getElementById('time-remaining').innerHTML = x;
         window.localStorage.setItem('currentTime', x);
         --x;
-        if(x==0) window.location.assign('end.html')
+        if(x==0) {
+            $('.time').hide();
+            $('#board').hide();
+            $('#end').show();
+        }
     }, 1000);
 }
 
