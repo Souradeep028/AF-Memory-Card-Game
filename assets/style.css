@@ -1,3 +1,7 @@
+*, ::after, ::before{
+    box-shadow: none !important;
+}
+
 body {
     background: #FFF;
 }
