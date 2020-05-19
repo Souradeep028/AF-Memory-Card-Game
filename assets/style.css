@@ -84,6 +84,24 @@ body {
     margin: 0 auto;
 }
 
+.results-social {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: medium;
+    text-align: center;
+    justify-content: center;
+    clear: both;
+    padding-top: 90px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 @media only screen and (max-width: 600px){
     .board{
         height: 340px;

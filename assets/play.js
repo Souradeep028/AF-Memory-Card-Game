@@ -46,7 +46,7 @@ function isFinish() {
             $('.time').hide();
             $('#board').hide();
             $('#end').show();
-            $('#content').html('Congrats, you\'ve got a photographing memory!');
+            $('#content').html('Congrats, you\'ve got a photographic memory!');
             document.getElementById('flips').innerHTML = flip;
             $('#match').hide();
         }, 2000)
