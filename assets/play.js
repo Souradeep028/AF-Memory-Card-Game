@@ -48,6 +48,7 @@ function isFinish() {
             $('#end').show();
             $('#content').html('Congrats, you\'ve got a photographing memory!');
             document.getElementById('flips').innerHTML = flip;
+            $('#match').hide();
         }, 2000)
     }
 }
