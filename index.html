@@ -2,31 +2,117 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <title>AF Match - Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>AF Match - Play</title>
 
-  <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="row justify-content-center align-self-center mt-2 pt-5 pb-5">
-      <!-- <h1>
-        <p class="text-center">AF MATCH</p>
-      </h1> -->
+    <div class="container">
+        <div class="row justify-content-center p-3">
+            <!-- <h1>
+                <p class="text-center">AF Match - Play</p>
+            </h1> -->
+        </div>
+        <img src="https://guesstheartist.netlify.com/img/af.png" alt="Logo" class="logo">
+        <div class="row">
+            <div class="time">
+                <strong>Time: <span id="time-remaining">60</span></strong>
+                <strong>Flips: <span id="flip">0</span></strong>
+            </div>
+        </div>
+        <div class="row" id="board">
+            <div class="board">
+                <div class="cards" data-framework="monkey">
+                    <img class="front-face" src="assets/img/monkey.png" alt="monkey" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="monkey">
+                    <img class="front-face" src="assets/img/monkey.png" alt="monkey" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+
+                <div class="cards" data-framework="dog">
+                    <img class="front-face" src="assets/img/dog.png" alt="dog" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="dog">
+                    <img class="front-face" src="assets/img/dog.png" alt="dog" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+
+                <div class="cards" data-framework="pig">
+                    <img class="front-face" src="assets/img/pig.png" alt="pig" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="pig">
+                    <img class="front-face" src="assets/img/pig.png" alt="pig" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+
+                <div class="cards" data-framework="zebra">
+                    <img class="front-face" src="assets/img/zebra.png" alt="zebra" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="zebra">
+                    <img class="front-face" src="assets/img/zebra.png" alt="zebra" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+
+                <div class="cards" data-framework="panda">
+                    <img class="front-face" src="assets/img/panda.png" alt="panda" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="panda">
+                    <img class="front-face" src="assets/img/panda.png" alt="panda" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+
+                <div class="cards" data-framework="owl">
+                    <img class="front-face" src="assets/img/owl.png" alt="owl" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+                <div class="cards" data-framework="owl">
+                    <img class="front-face" src="assets/img/owl.png" alt="owl" />
+                    <img class="back-face" src="assets/img/af_logo.png" alt="Karu Tertutup" />
+                </div>
+            </div>
+            <!-- <div class="col-12 p-1 pb-3 text-center">
+                <a href="./index.html" class="btn btn-dark btn-lg">
+                    « Back
+                </a>
+            </div> -->
+        </div>
+
+        <div class="row justify-content-around" id="end">
+            <!-- <div class="col-md-4 col-xs-12">
+                <ul class="list-group" id="leaderboard">
+                </ul>
+            </div> -->
+            <div class="col-12 p-1 pb-3 text-center">
+                <p class='content' id="content">Content!</p>
+                <p class="flips-matches">Flips: <span id="flips">0</span></p>
+                <p class="flips-matches">Matches: <span id="match">0</span></p>
+                <div class="flex-column">
+                    <a href="./index.html" class="btn btn-dark btn-lg" style="margin-top: 4rem;">
+                        Restart
+                    </a>
+                    <a href="https://www.artfervour.com/af-games" class="btn btn-dark btn-lg" style="margin-top: 1rem;">
+                        Play More Games
+                    </a>
+                    <a href="https://arthangman.netlify.app/" class="btn btn-dark btn-lg" style="margin-top: 1rem;">
+                        Play Art Hangman
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="https://guesstheartist.netlify.com/img/af.png" alt="Logo" class="logo">
-    <div class="row justify-content-around p-2">
-      <div class="col-md-4 col-xs-12">
-        <a href="play.html" class="btn btn-dark btn-lg btn-block"><strong>Play</strong></a>
-        <!-- <a href="leaderboard.html" class="btn btn-dark btn-lg btn-block"><strong>Leaderboard</strong></a> -->
-        <a href="guid.html" class="btn btn-dark btn-lg btn-block"><strong>Guide</strong></a>
-      </div>
-    </div>
-  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/play.js"></script>
 </body>
 
 </html>

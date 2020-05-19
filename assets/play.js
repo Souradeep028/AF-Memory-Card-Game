@@ -94,7 +94,7 @@ function shuffleCards() {
 }
 
 function time() {
-    let x = 60;
+    let x = 1;
     interval = setInterval(() => {
         document.getElementById('time-remaining').innerHTML = x;
         window.localStorage.setItem('currentTime', x);
