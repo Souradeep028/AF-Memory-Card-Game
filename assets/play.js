@@ -46,6 +46,7 @@ function isFinish() {
             $('.time').hide();
             $('#board').hide();
             $('#artName').hide();
+            $('#inst').hide();
             $('#end').show();
             $('#content').html('Congrats, you\'ve got a photographic memory!');
             document.getElementById('flips').innerHTML = flip;
@@ -125,6 +126,7 @@ function time() {
             $('.time').hide();
             $('#board').hide();
             $('#artName').hide();
+            $('#inst').hide();
             $('#end').show();
             $('#content').html('Oops, looks like you\'re all out of time! ');
             document.getElementById('flips').innerHTML = flip;

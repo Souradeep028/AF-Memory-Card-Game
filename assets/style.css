@@ -94,6 +94,12 @@ body {
     font-weight: 500;
 }
 
+#inst{
+    text-align: center;
+    margin-top: 1.4rem;
+    font-weight: 400;
+}
+
 .results-social {
     display: flex;
     flex-direction: column;
