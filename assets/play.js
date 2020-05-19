@@ -13,6 +13,7 @@ let lockBoard = false;
 let firstCard, secondCard;
 let cardLeft = cards.length;
 let interval = null;
+let flip = 0;
 
 function flipCard() {
     flipSound.play();
@@ -21,7 +22,8 @@ function flipCard() {
     if (this === firstCard) return;
 
     this.classList.add('flip');
-
+    ++flip;
+    document.getElementById('flip').innerHTML=flip;
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
@@ -53,7 +55,6 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     cardLeft -= 2;
-
     resetBoard();
 }
 
