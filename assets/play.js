@@ -45,16 +45,39 @@ function isFinish() {
         setInterval(()=>{
             $('.time').hide();
             $('#board').hide();
+            $('#artName').hide();
             $('#end').show();
             $('#content').html('Congrats, you\'ve got a photographic memory!');
             document.getElementById('flips').innerHTML = flip;
-            $('#match').hide();
+            $('#hd').hide();
         }, 2000)
     }
 }
 
 function checkForMatch() {
     let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+    if(isMatch){
+        console.log(firstCard.dataset.framework)
+        if(firstCard.dataset.framework==1){
+            document.getElementById('artName').innerHTML = 'Amedeo Modigliani, \'Red-headed Girl in Evening Dress\', 1918';
+        }
+        else if(firstCard.dataset.framework==2){
+            document.getElementById('artName').innerHTML = 'Edouard Manet, \'In the Conservatory\', 1879';
+        }
+        else if(firstCard.dataset.framework==3){
+            document.getElementById('artName').innerHTML = 'Juan Gris, \'Portrait of Pablo Picasso\', 1912';
+        }
+        else if(firstCard.dataset.framework==4){
+            document.getElementById('artName').innerHTML = 'Roy Lichtenstein, \'Hopeless\', 1963';
+        }
+        else if(firstCard.dataset.framework==5){
+            document.getElementById('artName').innerHTML = 'Johannes Vermeer, \'The Lacemaker\', 1669'; 
+        }
+        else if(firstCard.dataset.framework==6){
+            document.getElementById('artName').innerHTML = 'Man Ray, \'Portrait of Rose Selavy\', 1921'; 
+        }
+    }
 
     isMatch ? disableCards() : unflipCards();
 }
@@ -102,6 +125,7 @@ function time() {
         if(x==0) {
             $('.time').hide();
             $('#board').hide();
+            $('#artName').hide();
             $('#end').show();
             $('#content').html('Oops, looks like you\'re all out of time! ');
             document.getElementById('flips').innerHTML = flip;
