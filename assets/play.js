@@ -16,6 +16,7 @@ let firstCard, secondCard;
 let cardLeft = cards.length;
 let interval = null;
 let flip = 0;
+let matches = 0;
 
 function flipCard() {
     flipSound.play();
@@ -45,6 +46,8 @@ function isFinish() {
             $('.time').hide();
             $('#board').hide();
             $('#end').show();
+            $('#content').html('Congrats, you\'ve got a photographing memory!');
+            document.getElementById('flips').innerHTML = flip;
         }, 2000)
     }
 }
@@ -61,6 +64,7 @@ function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
     cardLeft -= 2;
+    ++matches;
     resetBoard();
 }
 
@@ -98,6 +102,9 @@ function time() {
             $('.time').hide();
             $('#board').hide();
             $('#end').show();
+            $('#content').html('Oops, looks like you\'re all out of time! ');
+            document.getElementById('flips').innerHTML = flip;
+            document.getElementById('match').innerHTML = matches;
         }
     }, 1000);
 }

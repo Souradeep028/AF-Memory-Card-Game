@@ -67,9 +67,19 @@ body {
     padding-top: 20px;
 }
 
+.content{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.flips-matches{
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
 @media only screen and (max-width: 600px){
     .board{
-        height: 350px;
+        height: 340px;
     }
     .time{
         justify-content: space-evenly;
