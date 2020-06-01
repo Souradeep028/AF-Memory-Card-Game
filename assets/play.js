@@ -2,7 +2,7 @@
 // backgroundMusic.volume = 0.5;
 // backgroundMusic.loop = true;
 
-$("#end").hide();
+document.querySelector("#end").style.display = 'none';
 
 let flipSound = new Audio("./assets/sound/flip.ogg");
 let matchSound = new Audio("./assets/sound/match.ogg");
