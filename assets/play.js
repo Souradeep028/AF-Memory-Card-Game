@@ -134,6 +134,9 @@ function time() {
       $("#inst").hide();
       $("#end").show();
       $("#game-end").hide();
+      $("#content").html("Oops, looks like you're all out of time! ");
+      document.getElementById("flips").innerHTML = flip;
+      document.getElementById("match").innerHTML = matches;
 
       form.addEventListener('submit', e => {
         e.preventDefault()
@@ -142,9 +145,6 @@ function time() {
               console.log('Success!', response);
               $("#emailForm").hide();
               $("#game-end").show();
-              $("#content").html("Oops, looks like you're all out of time! ");
-              document.getElementById("flips").innerHTML = flip;
-              document.getElementById("match").innerHTML = matches;
             })
           .catch(error => console.error('Error!', error.message))
       })
