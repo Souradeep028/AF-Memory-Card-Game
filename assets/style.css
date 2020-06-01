@@ -46,7 +46,7 @@ body {
 
 .cards.flip {
     transform: rotateY(180deg);
-}
+}   
 
 .front-face,
 .back-face {
