@@ -155,16 +155,16 @@ function time() {
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {
               console.log('Success!', response);
-            //   $("#emailForm").hide();
-            //   $("#game-end").show();
-            //   $("#content").html("Oops, looks like you're all out of time! ");
-            //   document.getElementById("flips").innerHTML = flip;
-            //   document.getElementById("match").innerHTML = matches;
+              $("#emailForm").hide();
+              $("#game-end").show();
+              $("#content").html("Oops, looks like you're all out of time! ");
+              document.getElementById("flips").innerHTML = flip;
+              document.getElementById("match").innerHTML = matches;
             })
           .catch(error => console.error('Error!', error.message))
       })
     }
-    
+
   }, 1000);
 }
 
