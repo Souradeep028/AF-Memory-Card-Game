@@ -65,10 +65,10 @@ function isFinish() {
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
           .then(response => {
               console.log('Success!', response);
-              $("#emailForm").hide();
-              $("#game-end").show();
             })
           .catch(error => console.error('Error!', error.message))
+        $("#emailForm").hide();
+        $("#game-end").show();
       })
 
     }, 2000);
@@ -143,7 +143,7 @@ function time() {
     document.getElementById("time-remaining").innerHTML = x;
     window.localStorage.setItem("currentTime", x);
     --x;
-    if (x == 0) {
+    if (x === -2) {
       $(".time").hide();
       $("#board").hide();
       $("#artName").hide();
@@ -162,10 +162,10 @@ function time() {
         fetch(scriptURL, { method: 'POST', dataType : 'jsonp', crossDomain:true, body: new FormData(form)})
           .then(response => {
               console.log('Success!', response);
-              $("#emailForm").hide();
-              $("#game-end").show();
             })
-          .catch(error => console.error('Error!', error.message))
+          .catch(error => console.error('Error!', error.message));
+          $("#emailForm").hide();
+          $("#game-end").show();
       })
     }
 
