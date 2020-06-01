@@ -138,6 +138,9 @@ function time() {
       document.getElementById("flips").innerHTML = flip;
       document.getElementById("match").innerHTML = matches;
 
+      document.querySelector('#matchesSubmit').value = matches;
+      document.querySelector('#flipsSubmit').value = flips;
+
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
