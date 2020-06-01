@@ -149,7 +149,7 @@ function time() {
       $("#inst").hide();
       $("#end").show();
       $("#game-end").hide();
-      $("#content").html("Oops, looks like you're all out of time! ");
+      $("#content").html("Oops, looks like you were all out of time! ");
       document.getElementById("flips").innerHTML = flip;
       document.getElementById("match").innerHTML = matches;
 
