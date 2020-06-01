@@ -17,7 +17,7 @@ let cardLeft = cards.length;
 let interval = null;
 let flip = 0;
 let matches = 0;
-const tTime = 2;
+const tTime = 20;
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyDORWsWjAh9KF33TWMeXRaiBGqdsAWlYN27I8kTcpwvgjZfXdk/exec';
 const form = document.forms['submit-to-google-sheet']
