@@ -20,7 +20,7 @@ let matches = 0;
 const tTime = 60;
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbyDORWsWjAh9KF33TWMeXRaiBGqdsAWlYN27I8kTcpwvgjZfXdk/exec";
+  "https://script.google.com/macros/s/AKfycbwHrtwpeb68_tSZplxtRdTJc4yhhqTBV3DhKEUWfGY8nSMyUvdT/exec";
 const form = document.forms["submit-to-google-sheet"];
 
 function flipCard() {
