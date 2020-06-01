@@ -135,21 +135,6 @@ function time() {
       $("#end").show();
       $("#game-end").hide();
 
-    //   $("#submitemail").prop("disabled", true);
-
-      
-    //   $("#inputemail").keyup(function () {
-    //     const email = document.getElementById("inputemail");
-    //     const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-    //     if (!re.test(email.value)) {
-    //       email.classList.add("is-invalid");
-    //     } else {
-    //       email.classList.remove("is-invalid");
-    //       $("#submitemail").prop("disabled", false);
-    //     }
-    //   });
-
       form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
