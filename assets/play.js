@@ -159,7 +159,7 @@ function time() {
 
       form.addEventListener('submit', e => {
         e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        fetch(scriptURL, { method: 'POST', dataType : 'jsonp', crossDomain:true, body: new FormData(form)})
           .then(response => {
               console.log('Success!', response);
               $("#emailForm").hide();
