@@ -110,54 +110,55 @@
       <p id="artName"></p>
 
       <div class="row justify-content-around" id="end">
+
         <div class="game-end" id="emailForm" style="width: 100%;">
-          <p style="text-align: center; font-size: 0.8rem;">Submit your email ID to register for the giveaway</br>and check out your score.</p>
-          <form
-            name="submit-to-google-sheet"
-            style="
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              width: 18rem;
-              margin: auto;
-              margin-bottom: 0.2rem;
-            "
-          >
-            <input
-              type="email"
-              name="Email"
-              id="inputemail"
-              placeholder="Enter your email..."
-              style="margin-bottom: 0.3rem; padding: 0.4rem; border: 1px solid black;"
-              required
-            />
-            <input
-              type="text"
-              name="Matches"
-              id="matchesSubmit"
-              style="display: none;"
-            />
-            <input
-              type="text"
-              name="Flips"
-              id="flipsSubmit"
-              style="display: none;"
-            />
-            <small
-              id="emailHelp"
-              class="form-text text-muted"
-              style="margin-bottom: 1rem; text-align: center;"
-              >We'll never share your email with anyone else.</small
+            <p style="text-align: center; font-size: 0.8rem;">Submit your email ID to register for the giveaway</br>and check out your score.</p>
+            <form
+              name="submit-to-google-sheet"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 18rem;
+                margin: auto;
+                margin-bottom: 0.2rem;
+              "
             >
-            <button
-              type="submit"
-              class="btn btn-dark"
-              style="margin-top: 1rem; width: 8rem; margin: auto;"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+              <input
+                type="email"
+                name="Email"
+                id="inputemail"
+                placeholder="Enter your email..."
+                style="margin-bottom: 0.3rem; padding: 0.4rem; border: 1px solid black;"
+                required
+              />
+              <input
+                type="text"
+                name="Matches"
+                id="matchesSubmit"
+                style="display: none;"
+              />
+              <input
+                type="text"
+                name="Flips"
+                id="flipsSubmit"
+                style="display: none;"
+              />
+              <small
+                id="emailHelp"
+                class="form-text text-muted"
+                style="margin-bottom: 1rem; text-align: center;"
+                >We'll never share your email with anyone else.</small
+              >
+              <button
+                type="submit"
+                class="btn btn-dark"
+                style="margin-top: 1rem; width: 8rem; margin: auto;"
+              >
+                Submit
+              </button>
+            </form>
+          </div>    
 
         <div class="col-12 p-1 pb-3 text-center" id="game-end">
           <p class="content" id="content">Content!</p>
@@ -226,14 +227,16 @@
           </div>
         </div>
       </div>
+
+
     </div>
     <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
-    <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <!-- <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
     <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script> -->
     <script src="assets/play.js"></script>
   </body>
 </html>
