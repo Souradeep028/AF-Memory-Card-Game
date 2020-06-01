@@ -2,7 +2,7 @@
 // backgroundMusic.volume = 0.5;
 // backgroundMusic.loop = true;
 
-document.querySelector("#end").style.display = 'none';
+document.querySelector("#end").style.display = "none";
 
 let flipSound = new Audio("./assets/sound/flip.ogg");
 let matchSound = new Audio("./assets/sound/match.ogg");
@@ -19,8 +19,9 @@ let flip = 0;
 let matches = 0;
 const tTime = 60;
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyDORWsWjAh9KF33TWMeXRaiBGqdsAWlYN27I8kTcpwvgjZfXdk/exec';
-const form = document.forms['submit-to-google-sheet']
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbyDORWsWjAh9KF33TWMeXRaiBGqdsAWlYN27I8kTcpwvgjZfXdk/exec";
+const form = document.forms["submit-to-google-sheet"];
 
 function flipCard() {
   flipSound.play();
@@ -46,7 +47,7 @@ function isFinish() {
   if (cardLeft === 0) {
     // backgroundMusic.pause();
     clearInterval(interval);
-    setInterval(() => {
+    setTimeout(() => {
       $(".time").hide();
       $("#board").hide();
       $("#artName").hide();
@@ -57,20 +58,18 @@ function isFinish() {
       document.getElementById("flips").innerHTML = flip;
       $("#hd").hide();
 
-      document.querySelector('#matchesSubmit').value = matches;
-      document.querySelector('#flipsSubmit').value = flip;
+      document.querySelector("#matchesSubmit").value = matches;
+      document.querySelector("#flipsSubmit").value = flip;
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-              console.log('Success!', response);
-            })
-          .catch(error => console.error('Error!', error.message))
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+
         $("#emailForm").hide();
         $("#game-end").show();
-      })
-
+      });
     }, 2000);
   }
 }
@@ -154,21 +153,26 @@ function time() {
       document.getElementById("flips").innerHTML = flip;
       document.getElementById("match").innerHTML = matches;
 
-      document.querySelector('#matchesSubmit').value = matches;
-      document.querySelector('#flipsSubmit').value = flip;
+      document.querySelector("#matchesSubmit").value = matches;
+      document.querySelector("#flipsSubmit").value = flip;
 
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', dataType : 'jsonp', crossDomain:true, body: new FormData(form)})
-          .then(response => {
-              console.log('Success!', response);
-            })
-          .catch(error => console.error('Error!', error.message));
-          $("#emailForm").hide();
-          $("#game-end").show();
-      })
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, {
+          method: "POST",
+          dataType: "jsonp",
+          crossDomain: true,
+          body: new FormData(form),
+        })
+          .then((response) => {
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+          
+        $("#emailForm").hide();
+        $("#game-end").show();
+      });
     }
-
   }, 1000);
 }
 
