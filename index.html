@@ -1,131 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
     <!-- <link rel="stylesheet" href="./assets/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <title>Flip Me</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap" rel="stylesheet">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <img src="./assets/img/af.png" alt="Logo" class="logo">
-        <p style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.8rem; text-align: center;">FLIP ME</p>
-        <p id="inst">We've put an arsty spin on your classic memory game.<br/>Flip the cards and put your memory to test!</p>
-        <div class="row">
-            <div class="time">
-                <strong>Time: <span id="time-remaining">60</span></strong>
-                <strong>Flips: <span id="flip">0</span></strong>
-            </div>
+      <img src="./assets/img/af.png" alt="Logo" class="logo" />
+      <p
+        style="
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 900;
+          font-size: 1.8rem;
+          text-align: center;
+        "
+      >
+        FLIP ME
+      </p>
+      <p id="inst">
+        We've put an arsty spin on your classic memory game.<br />Flip the cards
+        and put your memory to test!
+      </p>
+      <div class="row">
+        <div class="time">
+          <strong>Time: <span id="time-remaining">60</span></strong>
+          <strong>Flips: <span id="flip">0</span></strong>
         </div>
-        <div class="row" id="board">
-            <div class="board">
-                <div class="cards" data-framework="1">
-                    <img class="front-face" src="assets/img/01.png" alt="01" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="1">
-                    <img class="front-face" src="assets/img/01.png" alt="01" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
+      </div>
+      <div class="row" id="board">
+        <div class="board">
+          <div class="cards" data-framework="1">
+            <img class="front-face" src="assets/img/01.png" alt="01" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="1">
+            <img class="front-face" src="assets/img/01.png" alt="01" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
 
-                <div class="cards" data-framework="2">
-                    <img class="front-face" src="assets/img/02.png" alt="02" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="2">
-                    <img class="front-face" src="assets/img/02.png" alt="02" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
+          <div class="cards" data-framework="2">
+            <img class="front-face" src="assets/img/02.png" alt="02" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="2">
+            <img class="front-face" src="assets/img/02.png" alt="02" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
 
-                <div class="cards" data-framework="3">
-                    <img class="front-face" src="assets/img/03.png" alt="03" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="3">
-                    <img class="front-face" src="assets/img/03.png" alt="03" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
+          <div class="cards" data-framework="3">
+            <img class="front-face" src="assets/img/03.png" alt="03" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="3">
+            <img class="front-face" src="assets/img/03.png" alt="03" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
 
-                <div class="cards" data-framework="4">
-                    <img class="front-face" src="assets/img/04.png" alt="04" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="4">
-                    <img class="front-face" src="assets/img/04.png" alt="04" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
+          <div class="cards" data-framework="4">
+            <img class="front-face" src="assets/img/04.png" alt="04" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="4">
+            <img class="front-face" src="assets/img/04.png" alt="04" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
 
-                <div class="cards" data-framework="5">
-                    <img class="front-face" src="assets/img/05.png" alt="05" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="5">
-                    <img class="front-face" src="assets/img/05.png" alt="05" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
+          <div class="cards" data-framework="5">
+            <img class="front-face" src="assets/img/05.png" alt="05" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="5">
+            <img class="front-face" src="assets/img/05.png" alt="05" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
 
-                <div class="cards" data-framework="6">
-                    <img class="front-face" src="assets/img/06.png" alt="06" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-                <div class="cards" data-framework="6">
-                    <img class="front-face" src="assets/img/06.png" alt="06" />
-                    <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
-                </div>
-            </div>
+          <div class="cards" data-framework="6">
+            <img class="front-face" src="assets/img/06.png" alt="06" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+          <div class="cards" data-framework="6">
+            <img class="front-face" src="assets/img/06.png" alt="06" />
+            <img class="back-face" src="assets/img/cf.jpeg" alt="bgc" />
+          </div>
+        </div>
+      </div>
+
+      <p id="artName"></p>
+
+      <div class="row justify-content-around" id="end">
+        <div class="game-end" id="emailForm" style="width: 100%;">
+          <p style="text-align: center;">Thanks for playing!</p>
+          <form
+            name="submit-to-google-sheet"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              width: 18rem;
+              margin: auto;
+              margin-bottom: 0.2rem;
+            "
+          >
+            <input
+              type="email"
+              name="Email"
+              id="inputemail"
+              placeholder="Enter your email..."
+              style="margin-bottom: 0.3rem; padding: 0.4rem;"
+              required
+            />
+            <input
+              type="text"
+              name="Matches"
+              id="matchesSubmit"
+              style="display: none;"
+            />
+            <input
+              type="text"
+              name="Flips"
+              id="flipsSubmit"
+              style="display: none;"
+            />
+            <small
+              id="emailHelp"
+              class="form-text text-muted"
+              style="margin-bottom: 1rem; text-align: center;"
+              >We'll never share your email with anyone else.</small
+            >
+            <button
+              type="submit"
+              class="btn btn-dark"
+              style="margin-top: 1rem; width: 8rem; margin: auto;"
+            >
+              Submit
+            </button>
+          </form>
         </div>
 
-        <p id="artName"></p>
-
-        <div class="row justify-content-around" id="end">
-
-            <div class="game-end" id="emailForm" style="width: 100%;">
-                <p style="text-align: center;">Thanks for playing!</p>
-                <form name='submit-to-google-sheet' style="display: flex; flex-direction: column; justify-content: center; width: 18rem; margin: auto; margin-bottom: 0.2rem">
-                    <input type="email" name="Email" id="inputemail" placeholder="Enter your email..." style="margin-bottom: 0.3rem; padding: 0.4rem;" required>
-                    <input type="text" name="Matches" id="matchesSubmit" style="display: none;">
-                    <input type="text" name="Flips" id="flipsSubmit" style="display: none;">
-                    <small id="emailHelp" class="form-text text-muted" style="margin-bottom: 1rem; text-align: center;">We'll never share your email with anyone else.</small>
-                    <button type="submit" class="btn btn-dark" style="margin-top: 1rem; width: 8rem; margin: auto;">Submit</button>
-                </form>
+        <div class="col-12 p-1 pb-3 text-center" id="game-end">
+          <p class="content" id="content">Content!</p>
+          <p class="flips-matches">Flips: <span id="flips">0</span></p>
+          <p class="flips-matches" id="hd">
+            Matches: <span id="match">6/6</span>
+          </p>
+          <div class="flex-column">
+            <a
+              href="./index.html"
+              class="btn btn-dark btn-lg"
+              style="margin-top: 6rem;"
+            >
+              Restart
+            </a>
+            <a
+              href="https://www.artfervour.com/af-games"
+              class="btn btn-dark btn-lg"
+              style="margin-top: 1rem;"
+            >
+              Play More Games
+            </a>
+            <a
+              href="https://arthangman.netlify.app/"
+              class="btn btn-dark btn-lg"
+              style="margin-top: 1rem;"
+            >
+              Play Art Hangman
+            </a>
+          </div>
+          <div class="results-social">
+            <div id="social-text">
+              Did you like the quiz? Share your results with your friends, so
+              they can give it a shot!
             </div>
+            <div class="icon-container">
+              <a
+                href="whatsapp://send?text=https://guesstheartist.netlify.com/"
+              >
+                <img
+                  src="./assets/img/fb-logo-black-circle.png"
+                  style="
+                    height: 34px;
+                    width: 34px;
+                    display: inline-block;
+                    margin-top: 0px;
+                    margin-right: 24px;
+                  "
+                  alt=""
+              /></a>
 
-            <div class="col-12 p-1 pb-3 text-center" id="game-end">
-                <p class='content' id="content">Content!</p>
-                <p class="flips-matches">Flips: <span id="flips">0</span></p>
-                <p class="flips-matches" id="hd">Matches: <span id="match">6/6</span></p>
-                <div class="flex-column">
-                    <a href="./index.html" class="btn btn-dark btn-lg" style="margin-top: 6rem;">
-                        Restart
-                    </a>
-                    <a href="https://www.artfervour.com/af-games" class="btn btn-dark btn-lg" style="margin-top: 1rem;">
-                        Play More Games
-                    </a>
-                    <a href="https://arthangman.netlify.app/" class="btn btn-dark btn-lg" style="margin-top: 1rem;">
-                        Play Art Hangman
-                    </a>
-                </div>
-                <div class="results-social">
-                    <div id="social-text">Did you like the quiz? Share your results with your friends, so they can give it a shot!
-                    </div>
-                    <div class="icon-container">
-                      <a href="whatsapp://send?text=https://guesstheartist.netlify.com/">
-                        <img src="./assets/img/fb-logo-black-circle.png" style="height: 34px; width: 34px; display: inline-block; margin-top: 0px; margin-right: 24px;" alt=""></a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://guesstheartist.netlify.com/">
-                        <img src="./assets/img/whatsapp.png" style="height: 32px; width: 32px; display: inline-block; margin-top: 0px" alt=""></a>
-                    </div>
-                  </div>
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https://guesstheartist.netlify.com/"
+              >
+                <img
+                  src="./assets/img/whatsapp.png"
+                  style="
+                    height: 32px;
+                    width: 32px;
+                    display: inline-block;
+                    margin-top: 0px;
+                  "
+                  alt=""
+              /></a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+    <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/play.js"></script>
-</body>
-
+  </body>
 </html>

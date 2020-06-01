@@ -17,7 +17,7 @@ let cardLeft = cards.length;
 let interval = null;
 let flip = 0;
 let matches = 0;
-const tTime = 30;
+const tTime = 60;
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyDORWsWjAh9KF33TWMeXRaiBGqdsAWlYN27I8kTcpwvgjZfXdk/exec';
 const form = document.forms['submit-to-google-sheet']
@@ -52,9 +52,25 @@ function isFinish() {
       $("#artName").hide();
       $("#inst").hide();
       $("#end").show();
+      $("#game-end").hide();
       $("#content").html("Congrats, you've got a photographic memory!");
       document.getElementById("flips").innerHTML = flip;
       $("#hd").hide();
+
+      document.querySelector('#matchesSubmit').value = matches;
+      document.querySelector('#flipsSubmit').value = flip;
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+              console.log('Success!', response);
+              $("#emailForm").hide();
+              $("#game-end").show();
+            })
+          .catch(error => console.error('Error!', error.message))
+      })
+
     }, 2000);
   }
 }
@@ -139,7 +155,7 @@ function time() {
       document.getElementById("match").innerHTML = matches;
 
       document.querySelector('#matchesSubmit').value = matches;
-      document.querySelector('#flipsSubmit').value = flips;
+      document.querySelector('#flipsSubmit').value = flip;
 
       form.addEventListener('submit', e => {
         e.preventDefault()
