@@ -17,7 +17,7 @@ let cardLeft = cards.length;
 let interval = null;
 let flip = 0;
 let matches = 0;
-const tTime = 1;
+const tTime = 60;
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwHrtwpeb68_tSZplxtRdTJc4yhhqTBV3DhKEUWfGY8nSMyUvdT/exec";
