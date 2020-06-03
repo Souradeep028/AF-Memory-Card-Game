@@ -90,7 +90,10 @@ body {
     font-size: 1rem;
     /* margin-top: 0rem; */
     margin-bottom: -8rem;
-    padding: 3.7rem;
+    padding-top: 1.8rem;
+    padding-right: 3.7rem;
+    padding-bottom: 3.7rem;
+    padding-left: 3.7rem;
     font-weight: 600;
 }
 
