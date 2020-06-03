@@ -3,6 +3,7 @@
 // backgroundMusic.loop = true;
 
 document.querySelector("#end").style.display = "none";
+$("#fp").hide();
 
 let flipSound = new Audio("./assets/sound/flip.ogg");
 let matchSound = new Audio("./assets/sound/match.ogg");
@@ -17,7 +18,7 @@ let cardLeft = cards.length;
 let interval = null;
 let flip = 0;
 let matches = 0;
-const tTime = 60;
+const tTime = 1;
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwHrtwpeb68_tSZplxtRdTJc4yhhqTBV3DhKEUWfGY8nSMyUvdT/exec";
@@ -68,6 +69,9 @@ function isFinish() {
           .catch((error) => console.error("Error!", error.message));
 
         $("#emailForm").hide();
+        document.body.style.background = '#F8E052';
+        $('#tt').hide();
+        $('#fp').fp();
         $("#game-end").show();
       });
     }, 2000);
@@ -170,6 +174,9 @@ function time() {
           .catch((error) => console.error("Error!", error.message));
           
         $("#emailForm").hide();
+        $('#tt').hide();
+        $('#fp').show();
+        document.body.style.background = '#F8E052';
         $("#game-end").show();
       });
     }
