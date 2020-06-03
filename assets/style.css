@@ -122,6 +122,13 @@ body {
     font-weight: 400;
 }
 
+#inst1{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    font-weight: 400;
+}
+
 .results-social {
     display: flex;
     flex-direction: column;

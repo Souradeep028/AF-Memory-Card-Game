@@ -2,6 +2,7 @@
 // backgroundMusic.volume = 0.5;
 // backgroundMusic.loop = true;
 
+$("#game-start").hide();
 document.querySelector("#end").style.display = "none";
 $("#fp").hide();
 
@@ -152,6 +153,7 @@ function time() {
       $("#artName").hide();
       $("#inst").hide();
       $("#end").show();
+      $("#inst").hide();
       $("#game-end").hide();
       $("#content").html("Oops, looks like you were all out of time! ");
       document.getElementById("flips").innerHTML = flip;
@@ -194,4 +196,9 @@ function startGame() {
   cards.forEach((card) => card.addEventListener("click", flipCard));
 }
 
-startGame();
+$("#play-now").click(()=>{
+  $("#game-play").hide();
+  $("#game-start").show();
+  startGame();
+})
+
