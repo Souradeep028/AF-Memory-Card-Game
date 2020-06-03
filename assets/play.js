@@ -68,13 +68,13 @@ function isFinish() {
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => console.log("Success!", response))
           .catch((error) => console.error("Error!", error.message));
-
-          $("#emailForm").hide();
-          $('#tt').hide();
-          $('#fp').show();
-          document.body.style.background = '#F8E052';
-          $("#game-end").show();
       });
+
+      $("#emailForm").hide();
+      $('#tt').hide();
+      $('#fp').show();
+      document.body.style.background = '#F8E052';
+      $("#game-end").show();
     }, 2000);
   }
 }
