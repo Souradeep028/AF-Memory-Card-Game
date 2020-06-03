@@ -53,7 +53,7 @@ function isFinish() {
       $(".time").hide();
       $("#board").hide();
       $("#artName").hide();
-      $("#inst").hide();
+      $("#ins").hide();
       $("#end").show();
       $("#game-end").hide();
       $("#content").html("Congrats, you've got a photographic memory!");
@@ -69,11 +69,11 @@ function isFinish() {
           .then((response) => console.log("Success!", response))
           .catch((error) => console.error("Error!", error.message));
 
-        $("#emailForm").hide();
-        document.body.style.background = '#F8E052';
-        $('#tt').hide();
-        $('#fp').fp();
-        $("#game-end").show();
+          $("#emailForm").hide();
+          $('#tt').hide();
+          $('#fp').show();
+          document.body.style.background = '#F8E052';
+          $("#game-end").show();
       });
     }, 2000);
   }
