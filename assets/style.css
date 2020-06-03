@@ -84,6 +84,14 @@ body {
     font-weight: 600;
 }
 
+.content1{
+    font-size: 1rem;
+    /* margin-top: 0rem; */
+    margin-bottom: -8rem;
+    padding: 4rem;
+    font-weight: 600;
+}
+
 .flips-matches{
     margin-bottom: 0;
     font-weight: 500;
@@ -117,7 +125,7 @@ body {
     text-align: center;
     justify-content: center;
     clear: both;
-    padding-top: 140px;
+    padding-top: 60px;
 }
 
 #social-text{
