@@ -52,7 +52,7 @@ function isFinish() {
     setTimeout(() => {
       $(".time").hide();
       $("#board").hide();
-      $("#artName").hide();
+      $("#artName").hide(); 
       $("#ins").hide();
       $("#end").show();
       $("#game-end").hide();
