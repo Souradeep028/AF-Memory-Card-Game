@@ -73,6 +73,12 @@ body {
     padding-top: 20px;
 }
 
+.logo1{
+    height: 12rem;
+    margin: 0 auto;
+    display: flex;
+}
+
 .content{
     font-size: 1.2rem;
     font-weight: 600;
