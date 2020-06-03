@@ -146,9 +146,9 @@
           Matches: <span id="match">6/6</span>
         </p>
         <div class="flex-column">
-          <a href="#" onclick="window.location.reload(true);" class="btn btn-dark btn-lg" style="margin-top: 6rem;">
+          <!-- <a href="#" onclick="window.location.reload(true);" class="btn btn-dark btn-lg" style="margin-top: 6rem;">
             Restart
-          </a>
+          </a> -->
           <a href="https://www.artfervour.com/af-games" class="btn btn-dark btn-lg" style="margin-top: 1rem;">
             Play More Games
           </a>
@@ -187,6 +187,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <script src="assets/play.js"></script>
+  <script>
+    $(document).ready(function(){
+        $('.form-check-input').click(function() {
+            $('.form-check-input').not(this).prop('checked', false);
+        });
+    });
+    </script>
 </body>
 
 </html>
