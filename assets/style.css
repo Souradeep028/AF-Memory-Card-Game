@@ -82,6 +82,8 @@ body {
 .content{
     font-size: 1.2rem;
     font-weight: 600;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .content1{
