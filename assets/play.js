@@ -153,7 +153,7 @@ function time() {
       $("#artName").hide();
       $("#inst").hide();
       $("#end").show();
-      $("#inst").hide();
+      $("#ins").hide();
       $("#game-end").hide();
       $("#content").html("Oops, looks like you were all out of time! ");
       document.getElementById("flips").innerHTML = flip;

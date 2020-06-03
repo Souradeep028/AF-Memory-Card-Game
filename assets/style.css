@@ -115,7 +115,14 @@ body {
     font-weight: 500;
 }
 
-#inst{
+#ins{
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    font-weight: 400;
+}
+
+#inst0{
     text-align: center;
     font-size: 0.8rem;
     margin-top: 1.4rem;
